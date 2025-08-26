@@ -1,0 +1,82 @@
+@import './layout.scss';
+
+.drop-list {
+    height: 48px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 16px;
+    border-radius: 8px;
+    border: 1px solid $black;
+    background-color: transparent;
+
+    &__value-block {
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    &__arrow-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.btn {
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+
+    &__yellow {
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        color: $black;
+        background-color: $yellow;
+    }
+
+    &__yellow-border {
+        background-color: transparent;
+        border: 1px solid $yellow;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
+
+.drop-list {
+    &__label {
+        label {
+            font-family: "Inter", sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+        }
+    }
+
+    &__input {
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid transparent;
+        transition-duration: .3s;
+
+        input {
+            width: 100%;
+            height: 48px;
+            background-color: $grey;
+            padding-inline: 16px;
+            font-family: "Inter", sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+        }
+    }
+
+    .__with-title {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: .6rem;
+        width: 100%;
+    }
+}

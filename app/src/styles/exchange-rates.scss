@@ -1,0 +1,33 @@
+@import './layout.scss';
+
+.exchange-rates {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+
+    &__money-list {
+        display: flex;
+        flex-direction: column;
+        gap: .6rem;
+    }
+
+    &__pre {
+        border-bottom: 1px solid $black;
+        padding-bottom: 16px;
+    }
+
+    &__finally{
+        padding-top: 16px;
+    }
+
+    &__finally,
+    &__pre {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    
+}

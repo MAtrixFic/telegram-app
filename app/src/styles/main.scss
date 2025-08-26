@@ -1,0 +1,214 @@
+@import './layout.scss';
+
+.main-page {
+    width: 100%;
+
+    &__top {
+        border-bottom: 1px solid $black;
+    }
+
+    &__logo-container {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+
+    &__content-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__nav-container {
+        padding-block: 32px;
+        padding-inline: 16px;
+    }
+
+    &__nav {
+        width: 100%;
+        min-height: 504px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__bottom {
+        padding: 24px 16px;
+    }
+
+    &__contacts-list {
+        display: flex;
+        flex-direction: column;
+        gap: .6rem;
+    }
+
+    &__contact {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    &__page-name-container {
+        height: 72px;
+        padding-inline: 16px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: $grey;
+    }
+
+    &__page-name {
+        color: $black;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    &__content-container {
+        padding: 16px;
+
+    }
+}
+
+.nav-element {
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: $grey;
+    height: 136px;
+    width: 156px;
+
+    &__link {
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        color: $black;
+    }
+}
+
+#bold {
+    font-weight: 800;
+}
+
+.text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: $black;
+    line-height: 22px;
+
+    &__yellow {
+        border-bottom: 1px solid $yellow;
+        display: inline;
+        border-bottom: 1px solid $yellow;
+    }
+}
+
+.doted-list {
+    list-style: disc;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
+.label-input {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: .6rem;
+    width: 100%;
+
+
+    &__label {
+        label {
+            font-family: "Inter", sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+        }
+    }
+
+    &__input {
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid transparent;
+        transition-duration: .3s;
+
+        input {
+            width: 100%;
+            height: 48px;
+            background-color: $grey;
+            padding-inline: 16px;
+            font-family: "Inter", sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+        }
+    }
+
+    &__yellow {
+        border-color: $yellow;
+    }
+
+    &__message {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+    }
+}
+
+.yellow-text {
+    display: flex;
+    gap: .6rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+
+    &__title-container {
+        display: flex;
+        gap: .5rem;
+    }
+
+    &__title-number {
+        width: 24px;
+        aspect-ratio: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $yellow;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        border-radius: 100%;
+    }
+
+    &__title {
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    &__text {
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+    }
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}

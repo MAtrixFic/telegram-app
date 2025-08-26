@@ -1,0 +1,115 @@
+@import './layout.scss';
+
+.docs {
+    &__main-list-title {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    &__main-list-container {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    &__main-list {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    &__notify-block {
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    &__main-link-element {
+        background-color: $yellow;
+        height: 48px;
+        width: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    &__main-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+        color: $black;
+        font-weight: 500;
+        font-size: 18px;
+        font-family: "Inter", sans-serif;
+    }
+
+    &__presentation {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    &__presentaion__block {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    &__presentation__title {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &__presentation-list {
+        font-family: "Inter", sans-serif;
+        color: $black;
+        font-size: 18px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        width: fit-content;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $yellow;
+        }
+    }
+
+    &__calc-example {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+    }
+
+    &__text {
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    &__money-container {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    &__top-calc {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+
+    &__money-memo-list {
+        display: flex;
+        flex-direction: column;
+        gap: .6rem;
+    }
+}

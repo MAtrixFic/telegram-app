@@ -1,0 +1,26 @@
+import DropList from "../../../attributes/DropList";
+import { YellowButton } from "../../../attributes/Buttons";
+
+const CalcExample = () => {
+    return (
+        <div className='docs__calc-example'>
+            <div className="docs__top-calc">
+                <div className="docs__text-container">
+                    <p className="docs__text">
+                        Для получения примера рачета по импортно-экспортному контракту с применением национальных валют и GOLDAO укажите валюту отправителя (компании-импортера) и валюту получения (компании-экспортера)
+                    </p>
+                </div>
+                <div className="docs__money-container">
+                    <DropList name="Валюта отправителя" choiceLink="#" />
+                    <DropList name="Валюта получателя" choiceLink="#" />
+                </div>
+            </div>
+            <div className="docs__bottom-calc">
+                <YellowButton name='Получить' />
+            </div>
+
+        </div>
+    );
+};
+
+export default CalcExample;
