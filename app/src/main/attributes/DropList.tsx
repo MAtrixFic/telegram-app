@@ -7,10 +7,10 @@ interface IDropListProps {
 }
 
 const DropList = ({ name, choiceLink }: IDropListProps) => {
-    const naavigate = useNavigate();
+    const navigate = useNavigate();
 
     function NavigateToChoice() {
-        naavigate(choiceLink);
+        navigate(choiceLink);
     }
 
     return (
@@ -25,12 +25,12 @@ const DropList = ({ name, choiceLink }: IDropListProps) => {
     );
 };
 
-interface IDropListWithTitleProps {
+interface IDropListWithTitleProps extends IDropListProps {
     label: string,
-    message: string
+    message?: string
 }
 
-const DropListWithTitle = ({ label, message }: IDropListWithTitleProps) => {
+const DropListWithTitle = ({ label, message, name, choiceLink }: IDropListWithTitleProps) => {
     return (
         <div className="drop-list__with-title">
             <div className="drop-list__label">
@@ -38,7 +38,7 @@ const DropListWithTitle = ({ label, message }: IDropListWithTitleProps) => {
                     {label}
                 </label>
             </div>
-            <DropList name='gfsg' choiceLink="#"/>
+            <DropList name={name} choiceLink={choiceLink} />
             {message && <div className="drop-list__message">
                 <div className="drop-list__message-icon">
                     <IIcon />

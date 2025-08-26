@@ -11,12 +11,12 @@ const CalcExampleTwo = () => {
                 </div>
                 <div className="docs__money-list-container">
                     <ul className="doted-list">
-                        <li className="docs__money-element">
+                        <li className="list-dot-element">
                             <p className="text">
                                 валюта компании-покупателя (импортера): <span id='bold'>{'<RUB>'}</span>
                             </p>
                         </li>
-                        <li className="docs__money-element">
+                        <li className="list-dot-element">
                             <p className="text">
                                 валюта компании-продавца (экспортера): <span id='bold'>{'<EUR>'}</span>
                             </p>
@@ -39,7 +39,7 @@ const CalcExampleTwo = () => {
                 </div>
             </div>
             <div className="docs__bottom-calc">
-                <YellowButton name='Узнать больше' />
+                <YellowButton name='Узнать больше'/>
             </div>
 
         </div>

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Unbounded:wght@200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap');
 
 $black: #272121;
 $grey: #F5F7FA;
@@ -9,6 +8,7 @@ $yellow: #FFB800;
     padding: 0;
     margin: 0;
     border: 0;
+    font-family: "Inter", sans-serif;
 }
 
 *,
@@ -132,10 +132,22 @@ main {
     &__left {
         display: flex;
         gap: 2rem;
+        align-items: center;
+    }
+
+    &__btn{
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__nav-back-container{
+        display: flex;
+        align-items: center;
     }
 
     &__name-container {
-        font-family: "Roboto", sans-serif;
         font-size: 19px;
         font-weight: 600;
     }

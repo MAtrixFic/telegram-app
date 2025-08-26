@@ -1,19 +1,20 @@
 interface IButtonProps {
-    name: string
+    name: string,
+    onClick?: (<T>(params?: T) => void);
 }
 
-const YellowButton = ({ name }: IButtonProps) => {
+const YellowButton = ({ name, onClick }: IButtonProps) => {
     return (
-        <button className="btn btn__yellow">
+        <button className="btn btn__yellow" onClick={() => onClick ? onClick() : ''}>
             {name}
         </button>
     )
 }
 
 
-const YellowBorderButton = ({ name }: IButtonProps) => {
+const YellowBorderButton = ({ name, onClick }: IButtonProps) => {
     return (
-        <button className="btn btn__yellow-border">
+        <button className="btn btn__yellow-border" onClick={() => onClick ? onClick() : ''}>
             {name}
         </button>
     )

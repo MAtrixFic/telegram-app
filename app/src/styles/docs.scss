@@ -19,7 +19,6 @@
     }
 
     &__notify-block {
-        font-family: "Inter", sans-serif;
         font-weight: 500;
         font-size: 12px;
     }
@@ -40,13 +39,20 @@
         color: $black;
         font-weight: 500;
         font-size: 18px;
-        font-family: "Inter", sans-serif;
     }
 
     &__presentation {
         display: flex;
         flex-direction: column;
         gap: 1.2rem;
+        flex: 1;
+        justify-content: space-between;
+
+        .top {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
     }
 
     &__presentaion__block {
@@ -61,7 +67,6 @@
     }
 
     &__presentation-list {
-        font-family: "Inter", sans-serif;
         color: $black;
         font-size: 18px;
         font-weight: 500;
@@ -90,7 +95,6 @@
     }
 
     &__text {
-        font-family: "Inter", sans-serif;
         font-weight: 500;
         font-size: 18px;
     }

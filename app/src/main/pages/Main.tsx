@@ -1,4 +1,4 @@
-import { Logo, Document, Calculate } from "../svg/Main";
+import { Logo, Document, Calculate, Money, Support, Settings, About } from "../svg/Main";
 import NavElement from "../navigation/navigation-menu/NavElement";
 import '../../styles/main.scss'
 import '../../styles/attributes.scss'
@@ -16,8 +16,20 @@ const Main = () => {
                         <NavElement title="Документация" link="docs">
                             <Document />
                         </NavElement>
-                        <NavElement title="Калькулятор" link="calc">
+                        <NavElement title="Калькулятор" link="calc/one">
                             <Calculate />
+                        </NavElement>
+                        <NavElement title="Курсы валют" link="money/one">
+                            <Money />
+                        </NavElement>
+                        <NavElement title="Поддержка" link="support">
+                            <Support />
+                        </NavElement>
+                        <NavElement title="Настройки" link="settings">
+                            <Settings />
+                        </NavElement>
+                        <NavElement title="О GOLDAO" link="about">
+                            <About />
                         </NavElement>
                     </nav>
                 </div>

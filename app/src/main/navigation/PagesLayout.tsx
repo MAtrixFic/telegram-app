@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import '../../styles/docs.scss'
+import '../../styles/calc.scss'
 
 const PagesLayout = () => {
     return (

@@ -1,7 +1,9 @@
 import DropList from "../../../attributes/DropList";
 import { YellowButton } from "../../../attributes/Buttons";
+import { useNavigate } from "react-router-dom";
 
 const CalcExample = () => {
+    const navigation = useNavigate();
     return (
         <div className='docs__calc-example'>
             <div className="docs__top-calc">
@@ -16,7 +18,7 @@ const CalcExample = () => {
                 </div>
             </div>
             <div className="docs__bottom-calc">
-                <YellowButton name='Получить' />
+                <YellowButton name='Получить' onClick={()=> navigation('/pages/docs/presentation/calcexampletwo')} />
             </div>
 
         </div>
