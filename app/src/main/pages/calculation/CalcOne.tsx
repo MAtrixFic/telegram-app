@@ -9,25 +9,24 @@ const CalcOne = () => {
     return (
         <div className="calc">
             <div className="top">
-                <DropListWithTitle
-                    label="Валюта отправки"
-                    values="TRY"
-                    choiceLink="#"
-                    message="Валюта отправки - это валюта отправителя платежа" />
-                <DropListWithTitle
-                    label="Валюта получения"
-                    values="RUB"
-                    choiceLink="#"
-                    message="Валюта отправки - это валюта отправителя платежа" />
-                <DropListWithTitle
-                    label="Направление расчета"
-                    values="Хочу получить"
-                    choiceLink="#"
-                    message="При выборе “Хочу отправить” расчет будет произведен по сумме получения платежа" />
-                <InputLabel type='none' label="Сумма" value="2000" mode="white" />
+                <div className="top__inputs">
+                    <DropListWithTitle
+                        label="Валюта отправки"
+                        values={["TRY"]}
+                        message="Валюта отправки - это валюта отправителя платежа" dropListName={""} />
+                    <DropListWithTitle
+                        label="Валюта получения"
+                        values={["RUB"]}
+                        message="Валюта отправки - это валюта отправителя платежа" dropListName={""} />
+                    <DropListWithTitle
+                        label="Направление расчета"
+                        values={["Хочу получить"]}
+                        message="При выборе “Хочу отправить” расчет будет произведен по сумме получения платежа" dropListName={""} />
+                    <InputLabel type='none' label="Сумма" value="2000" mode="white" />
+                </div>
             </div>
             <div className="bottom">
-                <YellowButton name="Рассчитать" onClick={()=> navigate('/pages/calc/two')}/>
+                <YellowButton name="Рассчитать" onClick={() => navigate('/pages/calc/two')} />
             </div>
         </div>
     );

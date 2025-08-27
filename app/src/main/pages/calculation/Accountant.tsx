@@ -5,6 +5,7 @@ import { File } from "../../svg/Links"
 import { Minus, Plus } from "../../svg/Attributes"
 
 const Accountant = () => {
+
     return (
         <div className="accountant">
             <div className="top">
@@ -33,7 +34,7 @@ const Accountant = () => {
                     />
                 </div>
                 <div className="top__links">
-                    <YellowLink text="Закрывающие документы" link="#">
+                    <YellowLink text="Закрывающие документы" link="/pages/calc/closeddocument">
                         <File />
                     </YellowLink>
                 </div>

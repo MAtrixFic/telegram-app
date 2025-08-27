@@ -1,10 +1,10 @@
-import DropList from "../../attributes/DropList"
+import { DropListWithTitle } from "../../attributes/DropList"
 
 const Settings = () => {
     return (
-        <>
-            <DropList values="Выбор языка" choiceLink="" />
-        </>
+        <div className="settings">
+            <DropListWithTitle values={["Выбор языка"]} dropListName={"Выберите язык"} />
+        </div>
     )
 }
 

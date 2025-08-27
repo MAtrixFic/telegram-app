@@ -5,6 +5,7 @@ const CalculateSteps = () => {
     return (
         <div className="about-doc">
             <div className="top">
+                <div className="top__lists gap">
                 <TextListWithDodsAndNumbers
                     title="До проведения расчета"
                     icon={1}
@@ -28,6 +29,7 @@ const CalculateSteps = () => {
                         { text: <p>GOLDAO предоставит компании-покупателю (импортер), компании-продавцу (экспортер) закрывающие документы о проведенном расчете (выписки, акты и т.д.) для бухгалтерской отчетности</p> },
                     ]}
                 />
+                </div>
             </div>
             <div className="bottom">
                 <YellowBorderButton name="Принцип проведения расчетов" />

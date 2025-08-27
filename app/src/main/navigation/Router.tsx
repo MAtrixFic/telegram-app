@@ -47,30 +47,37 @@ const Router = () => {
                             <Route path='docs/presentation/calcexampletwo' element={<CalcExampleTwo />} />
                             <Route path='money/one' element={<ExchangeRates />} />
                             <Route path='money/two' element={<ExchangeRatesTwo />} />
+
                             <Route path='calc/one' element={<CalcOne />} />
                             <Route path='calc/two' element={<CalcTwo />} />
+                            <Route path='reg/yellow' element={<YellowReg />} />
+                            <Route path='last-docs/uploadoffer/one' element={<UploadingOffer />} />
+                            <Route path='last-docs/uploadoffer/two' element={<UploadingOfferTwo />} />
+
                             <Route path='calc/aboutprotection' element={<AboutProtection />} />
                             <Route path='calc/aboutreportwithcompany' element={<AboutReportWithCompany />} />
                             <Route path='calc/stepreport' element={<StepReport />} />
-                            <Route path='calc/usesections' element={<UseSections />} />
-                            <Route path='calc/accountant' element={<Accountant />} />
+
                             <Route path='calc/contractsagreementsapplication' element={<ContractsAgreementsApplication />} />
-                            <Route path='calc/calculationprocedure' element={<CalculationProcedure />} />
-                            <Route path='calc/closeddocument' element={<ClosedDocument />} />
+
                             <Route path='settings' element={<Settings />} />
+
                             <Route path='about' element={<About />} />
                             <Route path='about/calculatesteps' element={<CalculateSteps />} />
                             <Route path='about/makecalculate' element={<MakeCalculate />} />
+                            <Route path='calc/usesections' element={<UseSections />} />
+                            <Route path='calc/calculationprocedure' element={<CalculationProcedure />} />
                             <Route path='about/contractsandagreements' element={<ContractsAndAgreements />} />
+                            <Route path='calc/accountant' element={<Accountant />} />
+                            <Route path='calc/closeddocument' element={<ClosedDocument />} />
+
                             <Route path='last-docs' element={<Documentation />} />
                             <Route path='last-docs/reportexample/one' element={<ReportExample />} />
                             <Route path='last-docs/reportexample/two' element={<ReportExampleTwo />} />
                             <Route path='last-docs/templatereport/two' element={<TemplateReport />} />
-                            <Route path='last-docs/uploadoffer/one' element={<UploadingOffer />} />
-                            <Route path='last-docs/uploadoffer/two' element={<UploadingOfferTwo />} />
+
                             <Route path='golden-calc/one' element={<GolderCulc />} />
                             <Route path='golden-calc/two' element={<GoldenCalcTwo />} />
-                            <Route path='reg/yellow' element={<YellowReg />} />
                         </Route>
                     </Route>
                 </Routes>

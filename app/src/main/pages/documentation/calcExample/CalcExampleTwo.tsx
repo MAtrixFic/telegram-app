@@ -11,12 +11,12 @@ const CalcExampleTwo = () => {
                 </div>
                 <div className="docs__money-list-container">
                     <ul className="doted-list">
-                        <li className="list-dot-element">
+                        <li className="list-dot-element dots">
                             <p className="text">
                                 валюта компании-покупателя (импортера): <span id='bold'>{'<RUB>'}</span>
                             </p>
                         </li>
-                        <li className="list-dot-element">
+                        <li className="list-dot-element dots">
                             <p className="text">
                                 валюта компании-продавца (экспортера): <span id='bold'>{'<EUR>'}</span>
                             </p>
