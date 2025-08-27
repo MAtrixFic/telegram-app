@@ -13,8 +13,8 @@ const CalcExample = () => {
                     </p>
                 </div>
                 <div className="docs__money-container">
-                    <DropList name="Валюта отправителя" choiceLink="#" />
-                    <DropList name="Валюта получателя" choiceLink="#" />
+                    <DropList values="Валюта отправителя" choiceLink="#" />
+                    <DropList values="Валюта получателя" choiceLink="#" />
                 </div>
             </div>
             <div className="docs__bottom-calc">

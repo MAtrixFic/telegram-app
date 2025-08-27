@@ -1,7 +1,6 @@
 import { ButtonWithIconAndTitle, YellowBorderButton } from "../../attributes/Buttons"
 import { ButtonWithIcon } from "../../attributes/Buttons"
 import { Statistics, PaperMoney, Users, Calculator, Scales, Protection } from "../../svg/Attributes"
-
 import '../../../styles/about.scss'
 const About = () => {
     return (
@@ -13,7 +12,7 @@ const About = () => {
                 <ButtonWithIcon name="Процедура проведения расчетов" icon={<Calculator />} />
                 <ButtonWithIcon name="Договора и юридическое оформление расчетов" icon={<Scales />} />
                 <ButtonWithIcon name="Обечпечение безопасности" icon={<Protection />} />
-                <ButtonWithIconAndTitle name="Обечпечение безопасности" icon={<Protection />} title="Заголовок"/>
+                <ButtonWithIconAndTitle name="Обечпечение безопасности" icon={<Protection />} title="Заголовок" />
             </div>
             <div className="bottom">
                 <YellowBorderButton name="Связаться с GOLDAO" />

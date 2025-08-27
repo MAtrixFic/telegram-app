@@ -41,4 +41,22 @@ const YellowLink = ({ children, text, link }: IYellowLinkProps) => {
     );
 };
 
-export { YellowText, YellowLink };
+interface ITextWithIconProps {
+    icon: ReactNode,
+    text: ReactNode
+}
+
+const TextWithIcon = ({ icon, text }: ITextWithIconProps) => {
+    return (
+        <div className="text-with-icon">
+            <div className="text-with-icon__icon-container">
+                {icon}
+            </div>
+            <div className="text-with-icon__text-container">
+                {text}
+            </div>
+        </div>
+    )
+}
+
+export { YellowText, YellowLink,TextWithIcon };

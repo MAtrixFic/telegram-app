@@ -1,4 +1,4 @@
-import DropList from "../../attributes/DropList";
+import { DropListWithTitle } from "../../attributes/DropList";
 import { YellowButton } from "../../attributes/Buttons";
 
 import '../../../styles/exchange-rates.scss'
@@ -11,8 +11,8 @@ const ExchangeRates = () => {
         <div className='exchange-rates'>
             <div className="top">
                 <ul className="exchange-rates__money-list">
-                    <DropList name="Валюта отправителя" choiceLink="#" />
-                    <DropList name="Валюта получателя" choiceLink="#" />
+                    <DropListWithTitle values={['v1', 'v2']} dropListName="rates" />
+                    <DropListWithTitle values={['v1', 'v2']} dropListName="rates" />
                 </ul>
             </div>
             <div className="bottom">

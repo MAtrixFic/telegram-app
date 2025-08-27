@@ -11,17 +11,17 @@ const CalcOne = () => {
             <div className="top">
                 <DropListWithTitle
                     label="Валюта отправки"
-                    name="TRY"
+                    values="TRY"
                     choiceLink="#"
                     message="Валюта отправки - это валюта отправителя платежа" />
                 <DropListWithTitle
                     label="Валюта получения"
-                    name="RUB"
+                    values="RUB"
                     choiceLink="#"
                     message="Валюта отправки - это валюта отправителя платежа" />
                 <DropListWithTitle
                     label="Направление расчета"
-                    name="Хочу получить"
+                    values="Хочу получить"
                     choiceLink="#"
                     message="При выборе “Хочу отправить” расчет будет произведен по сумме получения платежа" />
                 <InputLabel type='none' label="Сумма" value="2000" mode="white" />

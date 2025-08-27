@@ -20,6 +20,18 @@ import CalculationProcedure from '../pages/calculation/CalculationProcedure';
 import ClosedDocument from '../pages/calculation/ClosedDocument';
 import Settings from '../pages/settings/Settings';
 import About from '../pages/about/About';
+import CalculateSteps from '../pages/about/CalculateSteps';
+import MakeCalculate from '../pages/about/MakeCalculate';
+import ContractsAndAgreements from '../pages/about/ContractsAndAgreements';
+import Documentation from '../pages/last-docs/Documentation';
+import ReportExample from '../pages/last-docs/ReportExample';
+import ReportExampleTwo from '../pages/last-docs/ReportExampleTwo';
+import TemplateReport from '../pages/last-docs/TemplateReport';
+import GolderCulc from '../pages/calculation/GolderCalculator.tsx/GolderCalc';
+import GoldenCalcTwo from '../pages/calculation/GolderCalculator.tsx/GolderCalcTwo';
+import UploadingOffer from '../pages/last-docs/UploadingOffer';
+import UploadingOfferTwo from '../pages/last-docs/UploadingOfferTwo';
+import YellowReg from '../pages/auth/YellowReg';
 
 const Router = () => {
     return (
@@ -47,6 +59,18 @@ const Router = () => {
                             <Route path='calc/closeddocument' element={<ClosedDocument />} />
                             <Route path='settings' element={<Settings />} />
                             <Route path='about' element={<About />} />
+                            <Route path='about/calculatesteps' element={<CalculateSteps />} />
+                            <Route path='about/makecalculate' element={<MakeCalculate />} />
+                            <Route path='about/contractsandagreements' element={<ContractsAndAgreements />} />
+                            <Route path='last-docs' element={<Documentation />} />
+                            <Route path='last-docs/reportexample/one' element={<ReportExample />} />
+                            <Route path='last-docs/reportexample/two' element={<ReportExampleTwo />} />
+                            <Route path='last-docs/templatereport/two' element={<TemplateReport />} />
+                            <Route path='last-docs/uploadoffer/one' element={<UploadingOffer />} />
+                            <Route path='last-docs/uploadoffer/two' element={<UploadingOfferTwo />} />
+                            <Route path='golden-calc/one' element={<GolderCulc />} />
+                            <Route path='golden-calc/two' element={<GoldenCalcTwo />} />
+                            <Route path='reg/yellow' element={<YellowReg />} />
                         </Route>
                     </Route>
                 </Routes>

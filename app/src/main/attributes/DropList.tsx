@@ -1,22 +1,17 @@
+import { useState, type ReactNode } from "react";
 import { AngleArrow, IIcon } from "../svg/Attributes";
-import { useNavigate } from "react-router-dom";
 
 interface IDropListProps {
-    name: string,
-    choiceLink: string,
+    values: string[],
+    activeIndex: number,
+    onClick: <T>(params?: T) => void
 }
 
-const DropList = ({ name, choiceLink }: IDropListProps) => {
-    const navigate = useNavigate();
-
-    function NavigateToChoice() {
-        navigate(choiceLink);
-    }
-
+const DropList = ({ values, activeIndex, onClick }: IDropListProps) => {
     return (
-        <button className="drop-list" onClick={NavigateToChoice}>
+        <button className="drop-list" onClick={onClick}>
             <div className="drop-list__value-block">
-                {name}
+                {values[activeIndex]}
             </div>
             <div className="drop-list__arrow-block">
                 <AngleArrow />
@@ -25,20 +20,28 @@ const DropList = ({ name, choiceLink }: IDropListProps) => {
     );
 };
 
-interface IDropListWithTitleProps extends IDropListProps {
-    label: string,
-    message?: string
+interface IDropListWithTitleProps {
+    label?: string,
+    message?: string,
+    dropListName: string,
+    values: string[],
+    type?: "yellow" | "yellow-grey",
+    icon?: ReactNode
 }
 
-const DropListWithTitle = ({ label, message, name, choiceLink }: IDropListWithTitleProps) => {
+const DropListWithTitle = ({ label, message, values, dropListName, type, icon }: IDropListWithTitleProps) => {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [openPanel, setOpenPanel] = useState(false);
+
     return (
-        <div className="drop-list__with-title">
-            <div className="drop-list__label">
+        <div className={`drop-list__with-title ${type ? type : ''}`}>
+            {label && <div className="drop-list__label">
+                {icon && icon}
                 <label htmlFor="#one">
                     {label}
                 </label>
-            </div>
-            <DropList name={name} choiceLink={choiceLink} />
+            </div>}
+            <DropList values={values} onClick={() => setOpenPanel(true)} activeIndex={activeIndex} />
             {message && <div className="drop-list__message">
                 <div className="drop-list__message-icon">
                     <IIcon />
@@ -47,6 +50,34 @@ const DropListWithTitle = ({ label, message, name, choiceLink }: IDropListWithTi
                     {message}
                 </div>
             </div>}
+            {openPanel && < DropListPanel name={dropListName} setActivePanel={setOpenPanel} setActiveIndex={setActiveIndex} elements={values} activePanel={openPanel} />}
+        </div>
+    )
+}
+
+interface IDropListPanelProps {
+    name: string | ReactNode,
+    elements: string[],
+    setActiveIndex: (value: number) => void,
+    setActivePanel: (value: boolean) => void;
+    activePanel: boolean
+}
+
+const DropListPanel = ({ name, elements, setActiveIndex, activePanel, setActivePanel }: IDropListPanelProps) => {
+    return (
+        <div className={`drop-list-panel ${activePanel ? 'active' : 'passive'}`}>
+            <div className="drop-list-panel__name-container">
+                <h3 className="drop-list-panel__name">
+                    {name}
+                </h3>
+            </div>
+            <ul className="drop-list-panel__list">
+                {elements.map((v, i) =>
+                    <li className="drop-list-panel__element" onClick={() => { setActiveIndex(i); setActivePanel(false) }}>
+                        <span>{v}</span>
+                    </li>
+                )}
+            </ul>
         </div>
     )
 }

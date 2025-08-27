@@ -3,7 +3,7 @@ import DropList from "../../attributes/DropList"
 const Settings = () => {
     return (
         <>
-            <DropList name="Выбор языка" choiceLink="" />
+            <DropList values="Выбор языка" choiceLink="" />
         </>
     )
 }
