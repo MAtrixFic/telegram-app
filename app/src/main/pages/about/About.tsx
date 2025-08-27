@@ -3,8 +3,13 @@ import { ButtonWithIcon } from "../../attributes/Buttons"
 import { Statistics, PaperMoney, Users, Calculator, Scales, Protection } from "../../svg/Attributes"
 import { useNavigate } from "react-router-dom"
 import '../../../styles/about.scss'
+
+import { useSetPageTitle } from "../../attributes/PageTitle/usePageTitle"
+import { AboutInfo } from "../../others/PagesInfo"
+
 const About = () => {
     const navigate = useNavigate();
+    useSetPageTitle(AboutInfo.about.title);
 
     return (
         <div className="about">

@@ -50,11 +50,11 @@
         font-size: 14px;
     }
 
-    
+
 
     &__page-name-container {
-        height: 72px;
-        padding-inline: 16px;
+        min-height: 72px;
+        padding: 16px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -90,4 +90,3 @@
         color: $black;
     }
 }
-

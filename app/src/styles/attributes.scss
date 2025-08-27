@@ -188,6 +188,7 @@
 
         &-text {
             font-size: 12px;
+            font-weight: 400;
         }
     }
 
@@ -442,5 +443,26 @@
         gap: .8rem;
         justify-content: center;
         align-items: flex-start;
+    }
+}
+
+.title-block {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+
+    &__text {
+        font-size: 24px;
+        font-weight: 500;
+
+        &.bold {
+            font-weight: 700;
+        }
+    }
+
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        gap: .4rem;
     }
 }
