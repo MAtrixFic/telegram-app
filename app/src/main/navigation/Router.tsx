@@ -12,6 +12,14 @@ import CalcOne from '../pages/calculation/CalcOne';
 import CalcTwo from '../pages/calculation/CalcTwo';
 import AboutProtection from '../pages/calculation/AboutProtection';
 import AboutReportWithCompany from '../pages/calculation/AboutReportWithCompany';
+import StepReport from '../pages/calculation/StepReport';
+import UseSections from '../pages/calculation/UseSections';
+import Accountant from '../pages/calculation/Accountant';
+import ContractsAgreementsApplication from '../pages/calculation/ContractsAgreementsApplication';
+import CalculationProcedure from '../pages/calculation/CalculationProcedure';
+import ClosedDocument from '../pages/calculation/ClosedDocument';
+import Settings from '../pages/settings/Settings';
+import About from '../pages/about/About';
 
 const Router = () => {
     return (
@@ -31,6 +39,14 @@ const Router = () => {
                             <Route path='calc/two' element={<CalcTwo />} />
                             <Route path='calc/aboutprotection' element={<AboutProtection />} />
                             <Route path='calc/aboutreportwithcompany' element={<AboutReportWithCompany />} />
+                            <Route path='calc/stepreport' element={<StepReport />} />
+                            <Route path='calc/usesections' element={<UseSections />} />
+                            <Route path='calc/accountant' element={<Accountant />} />
+                            <Route path='calc/contractsagreementsapplication' element={<ContractsAgreementsApplication />} />
+                            <Route path='calc/calculationprocedure' element={<CalculationProcedure />} />
+                            <Route path='calc/closeddocument' element={<ClosedDocument />} />
+                            <Route path='settings' element={<Settings />} />
+                            <Route path='about' element={<About />} />
                         </Route>
                     </Route>
                 </Routes>

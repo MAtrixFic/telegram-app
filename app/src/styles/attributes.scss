@@ -24,6 +24,29 @@
     }
 }
 
+.button{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+
+    &__title-container{
+        display: flex;
+        gap: .5rem;
+        align-items: center;
+    }
+
+    &__icon-block{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title{
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
 .btn {
     width: 100%;
     height: 48px;
@@ -43,6 +66,18 @@
         font-family: "Inter", sans-serif;
         font-weight: 500;
         font-size: 18px;
+    }
+
+    &.btn__with-icon {
+        height: unset;
+        display: flex;
+        gap: 0.4rem;
+        padding-inline: 8px;
+        padding-block: 12px;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 400;
+        border: 1px solid $yellow;
     }
 }
 
@@ -192,11 +227,22 @@
     &__title-container {
         display: flex;
         gap: .5rem;
+        align-items: center;
+    }
+
+    &__message {
+        align-items: center;
+        display: flex;
+        gap: .6rem;
+
+        &-text {
+            font-size: 12px;
+        }
     }
 
     &__title-number {
-        width: 24px;
-        aspect-ratio: 1;
+        min-width: 24px;
+        height: 24px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -218,6 +264,12 @@
         font-weight: 500;
         font-size: 16px;
     }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: .4rem;
+    }
 }
 
 .bottom {
@@ -231,14 +283,29 @@
     position: relative;
     padding-left: 1rem;
 
-    &::after {
-        content: "";
-        position: absolute;
-        left: -2px;
-        top: 10px;
-        width: 6px;
-        aspect-ratio: 1;
-        border-radius: 100%;
-        background-color: $black;
+
+    &.dots {
+        &::after {
+            content: "";
+            position: absolute;
+            left: -2px;
+            top: 10px;
+            width: 6px;
+            aspect-ratio: 1;
+            border-radius: 100%;
+            background-color: $black;
+        }
+    }
+
+    &.flag {
+        .list__flag {
+            position: absolute;
+            left: -14px;
+            top: 25%;
+        }
+    }
+
+    .text {
+        font-size: 16px;
     }
 }
