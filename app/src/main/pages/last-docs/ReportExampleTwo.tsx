@@ -1,7 +1,8 @@
-import { YellowButton, YellowBorderButton } from "../../attributes/Buttons"
+import { YellowLink } from "../../attributes/Buttons"
 import { DropListWithTitle } from "../../attributes/DropList"
 import { ButtonWithIconAndTitle } from "../../attributes/Buttons"
 import { File1 } from "../../svg/Attributes"
+// import { PagesInfo } from "../../others/PagesInfo"
 
 const ReportExampleTwo = () => {
     return (
@@ -19,8 +20,8 @@ const ReportExampleTwo = () => {
                 </div>
             </div>
             <div className="bottom">
-                <YellowBorderButton name="На главную" />
-                <YellowButton name="Калькулятор расччетов" />
+                <YellowLink name="На главную" link={'/'} additioanlStype="link__yellow-border" />
+                <YellowLink name="Калькулятор расччетов" link="/" additioanlStype="link__yellow" />
             </div>
         </div>
     )

@@ -16,7 +16,7 @@ const Main = () => {
                         <NavElement title="Документация" link="docs">
                             <Document />
                         </NavElement>
-                        <NavElement title="Калькулятор" link="calc/one">
+                        <NavElement title="Калькулятор" link="golden-calc/one">
                             <Calculate />
                         </NavElement>
                         <NavElement title="Курсы валют" link="money/one">

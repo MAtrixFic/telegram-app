@@ -1,11 +1,7 @@
 import { YellowBorderButton } from "../../attributes/Buttons"
 import { TextListWithDodsAndNumbers } from "../../attributes/TextList"
 
-import { useSetPageTitle } from "../../attributes/PageTitle/usePageTitle"
-import { AboutInfo } from "../../others/PagesInfo"
-
 const CalculateSteps = () => {
-    useSetPageTitle(AboutInfo.calculatesteps.title)
 
     return (
         <div className="about-doc">

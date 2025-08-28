@@ -2,6 +2,7 @@ import { YellowBorderButton } from "../../attributes/Buttons"
 import { TextListWithDodsAndNumbers } from "../../attributes/TextList"
 import { DoubleArrowTop, DoubleArrowBottom } from "../../svg/Attributes"
 
+
 const UseSections = () => {
     return (
         <div className="use-sections">

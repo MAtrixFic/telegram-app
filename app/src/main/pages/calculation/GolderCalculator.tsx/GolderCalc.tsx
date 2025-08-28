@@ -1,7 +1,8 @@
-import { YellowButton } from "../../../attributes/Buttons"
 import { DropListWithTitle } from "../../../attributes/DropList"
 import InputLabel from "../../../attributes/InputLabel"
 import { DoubleArrowBottom } from "../../../svg/Attributes"
+import { YellowLink } from "../../../attributes/Buttons"
+import { PagesInfo } from "../../../others/PagesInfo"
 
 const GolderCulc = () => {
     return (
@@ -15,7 +16,7 @@ const GolderCulc = () => {
                 </div>
             </div>
             <div className="bottom">
-                <YellowButton name="Рассчитать" />
+                <YellowLink name="Рассчитать" link={PagesInfo.goldcalctwo.link} additioanlStype="link__yellow" />
             </div>
         </div >
     )

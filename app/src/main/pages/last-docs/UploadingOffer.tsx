@@ -1,7 +1,8 @@
-import { YellowButton } from "../../attributes/Buttons"
+import { YellowLink } from "../../attributes/Buttons"
 import InputLabel from "../../attributes/InputLabel"
 import { DropListWithTitle } from "../../attributes/DropList"
 import { DoubleArrowBottom } from "../../svg/Attributes"
+import { PagesInfo } from "../../others/PagesInfo"
 
 const UploadingOffer = () => {
     return (
@@ -18,7 +19,7 @@ const UploadingOffer = () => {
                 </div>
             </div>
             <div className="bottom">
-                <YellowButton name=" Получить пример расчета" />
+                <YellowLink name="Рассчитать" additioanlStype="link__yellow" link={PagesInfo.uploadoffertwo.link} />
             </div>
         </div>
     )

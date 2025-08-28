@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import { YellowBorderButton, YellowButton } from '../../attributes/Buttons';
+import { YellowBorderButton, YellowButton, YellowLink } from '../../attributes/Buttons';
 import InputLabel from '../../attributes/InputLabel';
-
+import { PagesInfo } from '../../others/PagesInfo';
 const ExchangeRatesTwo = () => {
     const navigate = useNavigate();
 
@@ -19,7 +19,7 @@ const ExchangeRatesTwo = () => {
             </div>
             <div className="bottom">
                 <YellowBorderButton name="Главное меню" onClick={() => navigate('/')} />
-                <YellowButton name="Калькулятор" onClick={() => navigate('/pages/calc/one')} />
+                <YellowLink name="Калькулятор" additioanlStype='link__yellow' link={PagesInfo.calcone.link} />
             </div>
         </div>
     );

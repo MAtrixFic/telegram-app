@@ -45,21 +45,28 @@ const Router = () => {
                             <Route path='docs/presentation' element={<Presentation />} />
                             <Route path='docs/presentation/calcexample' element={<CalcExample />} />
                             <Route path='docs/presentation/calcexampletwo' element={<CalcExampleTwo />} />
+
                             <Route path='money/one' element={<ExchangeRates />} />
                             <Route path='money/two' element={<ExchangeRatesTwo />} />
 
+                            {/* неопределено */}
                             <Route path='calc/one' element={<CalcOne />} />
                             <Route path='calc/two' element={<CalcTwo />} />
                             <Route path='reg/yellow' element={<YellowReg />} />
-                            <Route path='last-docs/uploadoffer/one' element={<UploadingOffer />} />
-                            <Route path='last-docs/uploadoffer/two' element={<UploadingOfferTwo />} />
-
                             <Route path='calc/aboutprotection' element={<AboutProtection />} />
                             <Route path='calc/aboutreportwithcompany' element={<AboutReportWithCompany />} />
                             <Route path='calc/stepreport' element={<StepReport />} />
+                            {/* неопределено */}
 
+                            <Route path='golden-calc/one' element={<GolderCulc />} />
+                            <Route path='golden-calc/two' element={<GoldenCalcTwo />} />
+                            <Route path='last-docs/uploadoffer/one' element={<UploadingOffer />} />
+                            <Route path='last-docs/uploadoffer/two' element={<UploadingOfferTwo />} />
+
+                            {/* неопределено */}
                             <Route path='calc/contractsagreementsapplication' element={<ContractsAgreementsApplication />} />
-
+                            {/* неопределено */}
+                            
                             <Route path='settings' element={<Settings />} />
 
                             <Route path='about' element={<About />} />
@@ -75,9 +82,6 @@ const Router = () => {
                             <Route path='last-docs/reportexample/one' element={<ReportExample />} />
                             <Route path='last-docs/reportexample/two' element={<ReportExampleTwo />} />
                             <Route path='last-docs/templatereport/two' element={<TemplateReport />} />
-
-                            <Route path='golden-calc/one' element={<GolderCulc />} />
-                            <Route path='golden-calc/two' element={<GoldenCalcTwo />} />
                         </Route>
                     </Route>
                 </Routes>

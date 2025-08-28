@@ -4,6 +4,7 @@ import { TextListWithDodsAndNumbers } from "../../attributes/TextList"
 import { PaperMoney, Document, Calculator } from "../../svg/Attributes"
 
 const MakeCalculate = () => {
+
     return (
         <div className="about-doc">
             <div className="top">

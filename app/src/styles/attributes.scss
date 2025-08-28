@@ -47,16 +47,23 @@
     }
 }
 
-.btn {
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn,
+.link {
     width: 100%;
     height: 48px;
     border-radius: 8px;
+    color: $black;
 
     &__yellow {
         font-family: "Inter", sans-serif;
         font-weight: 500;
         font-size: 18px;
-        color: $black;
         background-color: $yellow;
     }
 
@@ -341,6 +348,7 @@
 
         &-text {
             font-size: 12px;
+            font-weight: 500;
         }
     }
 

@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { DoubleArrowBottom } from "../svg/Attributes";
+import { Link } from "react-router-dom";
 
 interface IButtonProps {
     name: string,
@@ -14,12 +15,26 @@ interface IButtonWithIconAndTitle extends IButtonWithIcon {
     title: string
 }
 
+interface IYellowLinkProps {
+    name: string,
+    link: string,
+    additioanlStype?: string
+}
+
 
 const YellowButton = ({ name, onClick }: IButtonProps) => {
     return (
         <button className="btn btn__yellow" onClick={() => onClick ? onClick() : ''}>
             {name}
         </button>
+    )
+}
+
+const YellowLink = ({ name, link, additioanlStype }: IYellowLinkProps) => {
+    return (
+        <Link to={link} className={`link ${additioanlStype}`}>
+            {name}
+        </Link>
     )
 }
 
@@ -70,4 +85,4 @@ const ButtonWithIconAndTitle = ({ name, onClick, icon, title }: IButtonWithIconA
     )
 }
 
-export { YellowButton, YellowBorderButton, ButtonWithIcon, ButtonWithIconAndTitle }
+export { YellowButton, YellowBorderButton, ButtonWithIcon, ButtonWithIconAndTitle, YellowLink }

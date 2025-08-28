@@ -2,7 +2,8 @@ import InputLabel from "../../../attributes/InputLabel"
 import { TextWithIcon } from "../../../attributes/Text"
 import { Money } from "../../../svg/Links"
 import { PaperMoney } from "../../../svg/Attributes"
-import { YellowButton } from "../../../attributes/Buttons"
+import { YellowLink } from "../../../attributes/Buttons"
+import { PagesInfo } from "../../../others/PagesInfo"
 
 const GoldenCalcTwo = () => {
     return (
@@ -29,7 +30,7 @@ const GoldenCalcTwo = () => {
                 </div>
             </div>
             <div className="bottom">
-                <YellowButton name="Рассчитать" />
+                <YellowLink name="Рассчитать" additioanlStype="link__yellow" link={PagesInfo.uploadofferone.link}/>
             </div>
         </div >
     )

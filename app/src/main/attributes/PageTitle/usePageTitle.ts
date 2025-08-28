@@ -1,4 +1,4 @@
-import { useContext, useEffect, type ReactNode } from "react"
+import { useContext, type ReactNode } from "react"
 import { CreatePageTitleContext } from "./TitleContext"
 
 function useGetPageTitle() {
@@ -10,9 +10,7 @@ function useGetPageTitle() {
 
 function useSetPageTitle(title: ReactNode) {
     const pageTitleContext = useContext(CreatePageTitleContext)
-    useEffect(() => {
-        pageTitleContext.setTitle(title)
-    }, [])
+    pageTitleContext.setTitle(title)
 }
 
 export { useGetPageTitle, useSetPageTitle }
