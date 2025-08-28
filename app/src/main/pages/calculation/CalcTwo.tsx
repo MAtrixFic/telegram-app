@@ -3,6 +3,7 @@ import { YellowButton } from "../../attributes/Buttons"
 import InputLabel from "../../attributes/InputLabel";
 import { YellowLink } from "../../attributes/Text";
 import { Protect, Calculate, Time } from "../../svg/Links";
+import { PagesInfo } from "../../others/PagesInfo";
 
 const CalcTwo = () => {
     const navigate = useNavigate();
@@ -17,13 +18,13 @@ const CalcTwo = () => {
                     <InputLabel type='bold' label='Официальный курс валют' message={null} mode={'yellow'} value='82,1234 RUB / 1USD' />
                 </div>
                 <div className="top__links">
-                    <YellowLink text='Как происходит расчет?' link='#'>
+                    <YellowLink text='Как происходит расчет?' link={PagesInfo.aboutreportwithcompany.link}>
                         <Calculate />
                     </YellowLink>
-                    <YellowLink text='Обеспечение безопасности' link='#' >
+                    <YellowLink text='Обеспечение безопасности' link={PagesInfo.aboutprotection.link} >
                         <Protect />
                     </YellowLink>
-                    <YellowLink text='Скорость проведения расчета' link='#' >
+                    <YellowLink text='Скорость проведения расчета' link={PagesInfo.stepreport.link} >
                         <Time />
                     </YellowLink>
                 </div>

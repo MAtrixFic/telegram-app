@@ -11,8 +11,8 @@ const ExchangeRates = () => {
         <div className='exchange-rates'>
             <div className="top">
                 <ul className="exchange-rates__money-list">
-                    <DropListWithTitle values={['v1', 'v2']} dropListName="rates" />
-                    <DropListWithTitle values={['v1', 'v2']} dropListName="rates" />
+                    <DropListWithTitle name="Валюта отправителя" values={['RUB', 'USD']} />
+                    <DropListWithTitle name="Валюта получателя" values={['RUB', 'USD']} />
                 </ul>
             </div>
             <div className="bottom">

@@ -32,6 +32,10 @@ import GoldenCalcTwo from '../pages/calculation/GolderCalculator.tsx/GolderCalcT
 import UploadingOffer from '../pages/last-docs/UploadingOffer';
 import UploadingOfferTwo from '../pages/last-docs/UploadingOfferTwo';
 import YellowReg from '../pages/auth/YellowReg';
+import BlackReg from '../pages/auth/BlackReg';
+import AboutMain from '../pages/about/AboutMain';
+import Subscribe from '../pages/Subscribe';
+import RegTemplate from '../pages/auth/RegTemplate';
 
 const Router = () => {
     return (
@@ -40,6 +44,8 @@ const Router = () => {
                 <Routes>
                     <Route path='/' element={<Layout />} >
                         <Route index element={<Main />} />
+                        <Route path='about' element={<AboutMain />} />
+                        <Route path='subscribe' element={<Subscribe />} />
                         <Route path='/pages' element={<PagesLayout />}>
                             <Route path='docs' element={<DocsMain />} />
                             <Route path='docs/presentation' element={<Presentation />} />
@@ -50,6 +56,8 @@ const Router = () => {
                             <Route path='money/two' element={<ExchangeRatesTwo />} />
 
                             {/* неопределено */}
+                            <Route path='reg/template' element={<RegTemplate />} />
+                            <Route path='reg/black' element={<BlackReg />} />
                             <Route path='calc/one' element={<CalcOne />} />
                             <Route path='calc/two' element={<CalcTwo />} />
                             <Route path='reg/yellow' element={<YellowReg />} />
@@ -66,7 +74,7 @@ const Router = () => {
                             {/* неопределено */}
                             <Route path='calc/contractsagreementsapplication' element={<ContractsAgreementsApplication />} />
                             {/* неопределено */}
-                            
+
                             <Route path='settings' element={<Settings />} />
 
                             <Route path='about' element={<About />} />

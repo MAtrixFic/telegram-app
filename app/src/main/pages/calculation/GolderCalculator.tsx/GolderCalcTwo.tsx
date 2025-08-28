@@ -10,8 +10,8 @@ const GoldenCalcTwo = () => {
         <div className="calc">
             <div className="top">
                 <div className="top__lists">
-                    <InputLabel mode="yellow" label="Сумма и валюта отправки" value="" type={"none"} />
-                    <InputLabel mode="yellow" label="Сумма и валюта получения" value="" type={"none"} />
+                    <InputLabel mode="yellow" label={<p className="text">Сумма и валюта отправки</p>} value="" type={"none"} />
+                    <InputLabel mode="yellow" label={<p className="text">Сумма и валюта получения</p>} value="" type={"none"} />
                 </div>
                 <div className="top__lists">
                     <TextWithIcon icon={<PaperMoney />} text={
@@ -30,7 +30,7 @@ const GoldenCalcTwo = () => {
                 </div>
             </div>
             <div className="bottom">
-                <YellowLink name="Рассчитать" additioanlStype="link__yellow" link={PagesInfo.uploadofferone.link}/>
+                <YellowLink name="Рассчитать" additioanlStype="link__yellow" link={PagesInfo.uploadofferone.link} />
             </div>
         </div >
     )

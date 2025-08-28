@@ -6,12 +6,14 @@ const AboutProtection = () => {
     return (
         <div className="about-protection">
             <div className="top">
-                <TextListWithDods
-                    title="Обеспечение физическими активами"
-                    content={['Все расчеты обеспечены физическими монетами из золота, серебра или платины']} />
-                <YellowLink  text="Узнать больше" link="#">
-                    <Money />
-                </YellowLink>
+                <div className="top__lists">
+                    <TextListWithDods
+                        title="Обеспечение физическими активами"
+                        content={['Все расчеты обеспечены физическими монетами из золота, серебра или платины']} />
+                    <YellowLink text="Узнать больше" link="#">
+                        <Money />
+                    </YellowLink>
+                </div>
             </div>
             <div className="bottom">
                 <YellowButton name="Далее" />

@@ -1,47 +1,35 @@
 import { useState, type ReactNode } from "react";
 import { AngleArrow, IIcon } from "../svg/Attributes";
-
-interface IDropListProps {
-    values: string[],
-    activeIndex: number,
-    onClick: <T>(params?: T) => void
-}
-
-const DropList = ({ values, activeIndex, onClick }: IDropListProps) => {
-    return (
-        <button className="drop-list" onClick={onClick}>
-            <div className="drop-list__value-block">
-                {values[activeIndex]}
-            </div>
-            <div className="drop-list__arrow-block">
-                <AngleArrow />
-            </div>
-        </button>
-    );
-};
-
 interface IDropListWithTitleProps {
-    label?: string,
+    label?: ReactNode,
     message?: string,
-    dropListName: string,
+    dropListName?: string,
     values: string[],
     type?: "yellow" | "yellow-grey",
-    icon?: ReactNode
+    icon?: ReactNode,
+    name?: string,
 }
 
-const DropListWithTitle = ({ label, message, values, dropListName, type, icon }: IDropListWithTitleProps) => {
-    const [activeIndex, setActiveIndex] = useState(0);
+const DropListWithTitle = ({ label, message, values = [''], type, icon, name }: IDropListWithTitleProps) => {
+    const [activeIndex, setActiveIndex] = useState(name ? -1 : 0);
     const [openPanel, setOpenPanel] = useState(false);
 
     return (
-        <div className={`drop-list__with-title ${type ? type : ''}`}>
+        <div className={`drop-list__with-title ${type ? type : ''}`} >
             {label && <div className="drop-list__label">
                 {icon && icon}
-                <label htmlFor="#one">
+                <label>
                     {label}
                 </label>
             </div>}
-            <DropList values={values} onClick={() => setOpenPanel(true)} activeIndex={activeIndex} />
+            <button className="drop-list" onClick={() => setOpenPanel(!openPanel)}>
+                <div className="drop-list__value-block">
+                    {name && activeIndex == -1 ? name : values[activeIndex]}
+                </div>
+                <div className={`drop-list__arrow-block ${openPanel ? 'active' : 'passive'}`}>
+                    <AngleArrow />
+                </div>
+            </button>
             {message && <div className="drop-list__message">
                 <div className="drop-list__message-icon">
                     <IIcon />
@@ -50,30 +38,25 @@ const DropListWithTitle = ({ label, message, values, dropListName, type, icon }:
                     {message}
                 </div>
             </div>}
-            {openPanel && < DropListPanel name={dropListName} setActivePanel={setOpenPanel} setActiveIndex={setActiveIndex} elements={values} activePanel={openPanel} />}
+            {openPanel && <DropListPanel activeIndex={activeIndex} setActivePanel={setOpenPanel} setActiveIndex={setActiveIndex} elements={values} activePanel={openPanel} />}
         </div>
     )
 }
 
 interface IDropListPanelProps {
-    name: string | ReactNode,
     elements: string[],
     setActiveIndex: (value: number) => void,
     setActivePanel: (value: boolean) => void;
-    activePanel: boolean
+    activePanel: boolean,
+    activeIndex: number
 }
 
-const DropListPanel = ({ name, elements, setActiveIndex, activePanel, setActivePanel }: IDropListPanelProps) => {
+const DropListPanel = ({ elements, setActiveIndex, activePanel, setActivePanel, activeIndex }: IDropListPanelProps) => {
     return (
         <div className={`drop-list-panel ${activePanel ? 'active' : 'passive'}`}>
-            <div className="drop-list-panel__name-container">
-                <h3 className="drop-list-panel__name">
-                    {name}
-                </h3>
-            </div>
             <ul className="drop-list-panel__list">
                 {elements.map((v, i) =>
-                    <li className="drop-list-panel__element" onClick={() => { setActiveIndex(i); setActivePanel(false) }}>
+                    <li className={`drop-list-panel__element ${activeIndex == elements.indexOf(v) ? 'active' : ''}`} onClick={() => { setActiveIndex(i); setActivePanel(false) }}>
                         <span>{v}</span>
                     </li>
                 )}
@@ -81,6 +64,4 @@ const DropListPanel = ({ name, elements, setActiveIndex, activePanel, setActiveP
         </div>
     )
 }
-
-export default DropList;
 export { DropListWithTitle }

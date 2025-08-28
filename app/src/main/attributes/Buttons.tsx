@@ -12,7 +12,7 @@ interface IButtonWithIcon extends IButtonProps {
 }
 
 interface IButtonWithIconAndTitle extends IButtonWithIcon {
-    title: string
+    title: ReactNode
 }
 
 interface IYellowLinkProps {

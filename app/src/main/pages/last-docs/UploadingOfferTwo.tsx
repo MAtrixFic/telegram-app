@@ -8,11 +8,11 @@ const UploadingOfferTwo = () => {
         <div className="about-doc">
             <div className="top grey">
                 <div className="top__grey-block">
-                    <InputLabel mode="yellow" label="Сумма и валюта отправки" value="230 000 EUR" type={"none"} />
-                    <InputLabel mode="yellow" label="Сумма и валюта получения" value="230 000 EUR" type={"none"} />
+                    <InputLabel mode="yellow" label={<p className="text">Сумма и валюта отправки</p>} value="230 000 EUR" type={"none"} />
+                    <InputLabel mode="yellow" label={<p className="text">Сумма и валюта получения</p>} value="230 000 EUR" type={"none"} />
                 </div>
                 <div className="top__links">
-                    <ButtonWithIconAndTitle title="Для загрузки примера расчета нажмите здесьs" name={'Пример расчета с применением GOLDAO'} icon={<File1 />} />
+                    <ButtonWithIconAndTitle title={<p className="text">Для загрузки примера расчета нажмите здесь</p>} name={'Пример расчета с применением GOLDAO'} icon={<File1 />} />
                 </div>
             </div>
             <div className="bottom">

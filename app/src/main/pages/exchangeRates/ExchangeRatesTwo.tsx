@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { YellowBorderButton, YellowButton, YellowLink } from '../../attributes/Buttons';
+import { YellowBorderButton, YellowLink } from '../../attributes/Buttons';
 import InputLabel from '../../attributes/InputLabel';
 import { PagesInfo } from '../../others/PagesInfo';
 const ExchangeRatesTwo = () => {
@@ -13,8 +13,8 @@ const ExchangeRatesTwo = () => {
                     <InputLabel type='none' label='Валюта получения' message={null} mode={'grey'} value='' />
                 </div>
                 <div className="exchange-rates__finally">
-                    <InputLabel type='bold' label='98,1234 RUB / 1USD' message={'Курс валют в GOLDAO с учетом комиссий ифнраструтуры и дисконта к официальному курсу'} mode={'yellow'} value='' />
-                    <InputLabel type='bold' label='82,1234 RUB / 1USD' message={'Официальный курс валют рассчитывается по цене золота на LBME'} mode={'grey'} value='' />
+                    <InputLabel type='bold' value='98,1234 RUB / 1USD' message={'Курс валют в GOLDAO с учетом комиссий ифнраструтуры и дисконта к официальному курсу'} mode={'yellow'} label='Курс валют с учетом комиссий и дисконта' />
+                    <InputLabel type='bold' value='82,1234 RUB / 1USD' message={'Официальный курс валют рассчитывается по цене золота на LBME'} mode={'grey'} label='Официальный курс валют' />
                 </div>
             </div>
             <div className="bottom">

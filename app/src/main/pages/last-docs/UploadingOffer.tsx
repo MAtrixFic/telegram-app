@@ -9,13 +9,13 @@ const UploadingOffer = () => {
         <div className="about-doc">
             <div className="top grey">
                 <div className="top__grey-block">
-                    <InputLabel mode="yellow" label="Сумма и валюта отправки" value="230 000 EUR" type={"none"} />
-                    <InputLabel mode="yellow" label="Сумма и валюта получения" value="230 000 EUR" type={"none"} />
+                    <InputLabel mode="yellow" label={<p className="text">Сумма и валюта отправки</p>} value="230 000 EUR" type={"none"} />
+                    <InputLabel mode="yellow" label={<p className="text">Сумма и валюта получения</p>} value="230 000 EUR" type={"none"} />
                 </div>
                 <div className="top__inputs">
-                    <InputLabel mode="yellow-white" label="Сумма и валюта получения" value="230 000 EUR" type={"none"} />
-                    <InputLabel mode="yellow-white" label="Сумма и валюта получения" value="230 000 EUR" type={"none"} />
-                    <DropListWithTitle icon={<DoubleArrowBottom />} dropListName="Выбери" type="yellow" values={['one']} label={'Укажите основания для проведения расчета'} />
+                    <InputLabel icon={<DoubleArrowBottom />} mode="yellow-white" label={<p className="text">Введите название компании-отправителя <span id='bold'>(импортера)</span></p>} value="" type={"none"} />
+                    <InputLabel icon={<DoubleArrowBottom />} mode="yellow-white" label={<p className="text">Введите название компании-получателя <span id='bold'>{'(экспортера)'}</span></p>} value="" type={"none"} />
+                    <DropListWithTitle icon={<DoubleArrowBottom />} dropListName="Выбери" type="yellow" values={['one']} label={<p className="text">Укажите основания для проведения расчета</p>} />
                 </div>
             </div>
             <div className="bottom">

@@ -1,3 +1,5 @@
+@import '../styles/layout.scss';
+
 .about {
     flex: 1;
     display: flex;
@@ -29,5 +31,47 @@
         flex-direction: column;
         gap: .5rem;
         padding: 16px;
+    }
+
+    &__bottom-container {
+        padding: 16px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        color: $black;
+    }
+
+    &__info-block {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 16px;
+        border-bottom: .5px solid rgba(#000, .15);
+    }
+
+    &__dop-info {
+        display: flex;
+        justify-content: flex-start;
+        gap: .6rem;
+
+    }
+
+    &__icon-text-container {
+        display: flex;
+        gap: .6rem;
+    }
+
+    &__text {
+        font-size: 18px;
+        color: #000;
+    }
+
+    &__offers-block {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 }

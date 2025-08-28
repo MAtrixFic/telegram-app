@@ -1,9 +1,9 @@
-import { YellowButton } from "../../attributes/Buttons"
 import { YellowLink } from "../../attributes/Text"
 import { TextListWithDodsAndNumbers } from "../../attributes/TextList"
-import { YellowBorderButton } from "../../attributes/Buttons"
+import { YellowLink as YLink } from "../../attributes/Buttons"
 
 import { Users, PaperMoney, Scales, File } from "../../svg/Links"
+import { PagesInfo } from "../../others/PagesInfo"
 
 const StepReport = () => {
     return (
@@ -31,23 +31,23 @@ const StepReport = () => {
                     />
                 </div>
                 <div className="top__links">
-                    <YellowLink text="Участники проведения расчета" link="">
+                    <YellowLink text="Участники проведения расчета" link={PagesInfo.usesections.link}>
                         <Users />
                     </YellowLink>
-                    <YellowLink text="Процедура проведения расчета" link="">
+                    <YellowLink text="Процедура проведения расчета" link={PagesInfo.calculationprocedure.link}>
                         <PaperMoney />
                     </YellowLink>
-                    <YellowLink text="Договора и юридическое оформление" link="">
+                    <YellowLink text="Договора и юридическое оформление" link={PagesInfo.contractsandagreements.link}>
                         <Scales />
                     </YellowLink>
-                    <YellowLink text="Бухгалтерская проводка и отчетнсоть" link="">
+                    <YellowLink text="Бухгалтерская проводка и отчетнсоть" link={PagesInfo.accountant.link}>
                         <File />
                     </YellowLink>
                 </div>
             </div>
             <div className="bottom">
-                <YellowBorderButton name="На главную" />
-                <YellowButton name="Скачать предложение" />
+                <YLink link="/" additioanlStype="link__yellow" name="На главную" />
+                <YLink link="" name="Скачать предложение" additioanlStype="link__yellow-border" />
             </div>
         </div>
     )

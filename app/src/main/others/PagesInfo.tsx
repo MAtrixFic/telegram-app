@@ -137,7 +137,51 @@ const PagesInfo = {
         title: <Title top='Загрузка предложения '
             bottom="для проведения расчета по договору поставки"
         />
-    }
+    },
+
+    //undefinde
+    regblack: {
+        link: '/pages/reg/black',
+        title: 'Регистрация'
+    },
+    regyellow: {
+        link: '/pages/reg/yellow',
+        title: <Title top="Регистрация"
+            message="Для получения предложения на проведение расчета по договору поставки с применением GOLDAO и национальных валют необходимо зарегистрироваться"
+        />
+    },
+    regtemplate: {
+        link: '/pages/reg/template',
+        title: <Title top="Шаблоны договоров"
+            bottom="для проведения расчетов"
+            message="Для получения примера расчета по договору поставки с применением GOLDAO выберите валюту страны регистрации отправителя (импортера) и валюту страны регитсрации получателя (экспортера)"
+        />
+    },
+    contractsagreementsapplication: {
+        link: '/pages/calc/contractsagreementsapplication',
+        title: <Title
+            top="Договора и соглашения"
+            bottom="приложения к договору поставки"
+        />
+    },
+    aboutprotection: {
+        link: '/pages/calc/aboutprotection',
+        title: 'Обеспечение безопасности'
+    },
+    aboutreportwithcompany: {
+        link: '/pages/calc/aboutreportwithcompany',
+        title: <Title
+            top="О проведении расчета"
+            bottom="с применением GOLDAO"
+        />
+    },
+    stepreport: {
+        link: '/pages/calc/stepreport',
+        title: <Title
+            top="Этапы расчета"
+            bottom="с применением GOLDAO"
+        />
+    },
 }
 
 export { PagesInfo }

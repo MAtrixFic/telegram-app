@@ -1,4 +1,4 @@
-import React, { type ReactNode } from 'react';
+import { type ReactNode } from 'react';
 import { IIcon } from '../svg/Attributes';
 
 
@@ -77,7 +77,7 @@ const TextListWithDods = ({ title, content }: ITextListProps) => {
                 <ul className="list__list">
                     {
                         content.map((v, i) =>
-                            <li key={v + i} className="list-dot-element">
+                            <li key={v + i} className="list-dot-element dots">
                                 <p className="text">
                                     {v}
                                 </p>
@@ -116,14 +116,14 @@ const TextListWithDodsAndNumbers = ({ title, content, icon, message }: ITextList
                     {
                         content.map((v, i) =>
                             <li key={i} className={`list-dot-element ${v.flag ? 'flag' : 'dots'}`}>
-                                <p className="text">
-                                    {v.text}
-                                </p>
                                 {v.flag &&
                                     <div className="list__flag">
                                         {v.flag}
                                     </div>
                                 }
+                                <p className="text">
+                                    {v.text}
+                                </p>
                             </li>
                         )
                     }

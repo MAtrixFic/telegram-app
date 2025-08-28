@@ -2,9 +2,9 @@ import type { ReactNode } from 'react';
 import { IIcon } from '../svg/Attributes';
 
 interface IInputLabelProps {
-    label?: string
+    label?: ReactNode
     message?: string | null,
-    mode: 'yellow' | 'white' | 'grey' | 'yellow-white',
+    mode: 'yellow' | 'white' | 'grey' | 'yellow-white' | "black",
     value: string,
     type: 'bold' | 'none',
     icon?: ReactNode
@@ -17,7 +17,7 @@ const InputLabel = ({ label, message, mode, value, type, icon }: IInputLabelProp
                 {icon && <div className="label-input__icon-container">
                     {icon}
                 </div>}
-                {label && <label htmlFor="#one">
+                {label && <label>
                     {label}
                 </label>}
             </div>

@@ -1,4 +1,4 @@
-import DropList from "../../../attributes/DropList";
+import { DropListWithTitle } from "../../../attributes/DropList";
 import { YellowButton } from "../../../attributes/Buttons";
 import { useNavigate } from "react-router-dom";
 
@@ -13,12 +13,12 @@ const CalcExample = () => {
                     </p>
                 </div>
                 <div className="docs__money-container">
-                    <DropList values="Валюта отправителя" choiceLink="#" />
-                    <DropList values="Валюта получателя" choiceLink="#" />
+                    <DropListWithTitle values={['RUB']} dropListName="Валюта отправителя" />
+                    <DropListWithTitle values={['RUB']} dropListName="Валюта получателя" />
                 </div>
             </div>
             <div className="docs__bottom-calc">
-                <YellowButton name='Получить' onClick={()=> navigation('/pages/docs/presentation/calcexampletwo')} />
+                <YellowButton name='Получить' onClick={() => navigation('/pages/docs/presentation/calcexampletwo')} />
             </div>
 
         </div>

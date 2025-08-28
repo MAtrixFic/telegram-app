@@ -9,10 +9,17 @@ const GolderCulc = () => {
         <div className="calc">
             <div className="top">
                 <div className="top__lists">
-                    <DropListWithTitle values={['one']} type="yellow" dropListName="name" label="Укажите валюту страны отправителя платежа (импортера)" />
-                    <DropListWithTitle values={['one']} type="yellow" dropListName="name" label="Укажите валюту страны получателя платежа (экспортера)" />
-                    <DropListWithTitle values={['one']} type="yellow" dropListName="name" label="Выберите тип расчета, что бы рассчитать сумму получения" />
-                    <InputLabel icon={<DoubleArrowBottom />} mode="yellow-white" label="Укажите сумму" value="" type={"none"} />
+                    <DropListWithTitle values={['']} type="yellow" dropListName="name"
+                        icon={<DoubleArrowBottom />}
+                        label={<p className="text">Укажите <span id='bold'>{'валюту страны отправителя'}</span> платежа (импортера)</p>} />
+                    <DropListWithTitle values={['']} type="yellow" dropListName="name"
+                        icon={<DoubleArrowBottom />}
+                        label={<p className="text">Укажите <span id='bold'>{'валюту страны получателя'}</span> платежа (экспортера)</p>} />
+                    <DropListWithTitle values={['']} type="yellow" dropListName="name"
+                        icon={<DoubleArrowBottom />}
+                        label={<p className="text"> Выберите <span id='bold'>{'тип расчета'}</span>, что бы рассчитать сумму получения</p>} />
+                    <InputLabel icon={<DoubleArrowBottom />} mode="yellow-white"
+                        label={<p className="text">Укажите <span id='bold'>{'сумму'}</span></p>} value="" type={"none"} />
                 </div>
             </div>
             <div className="bottom">
